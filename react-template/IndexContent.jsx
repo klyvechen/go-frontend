@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 
-class MainContent extends React.Component {
+class IndexContent extends React.Component {
     render() {
         return (
             <section id="main-content">
@@ -64,10 +64,9 @@ class MainContent extends React.Component {
 
                     <div className="row">
                         <div className="col-lg-9 col-md-12">
-
                             <div className="panel panel-default">
                                 <div className="panel-heading">
-                                    <h2><i className="fa fa-map-marker red"></i><strong>Countries</strong></h2>
+                                    <i className="fa fa-map-marker red"></i><strong>Countries</strong>
                                     <div className="panel-actions">
                                         <a href="index.html#" className="btn-setting"><i className="fa fa-rotate-right"></i></a>
                                         <a href="index.html#" className="btn-minimize"><i className="fa fa-chevron-up"></i></a>
@@ -75,19 +74,14 @@ class MainContent extends React.Component {
                                     </div>
                                 </div>
                                 <div className="panel-body-map">
-                                    <div id="map" style={{height: '380px'}}></div>
+                                    <div id="map" style={{ height: '380px' }}></div>
                                 </div>
-
                             </div>
                         </div>
                         <div className="col-md-3">
-                            {/* <!-- List starts --> */}
                             <ul className="today-datas">
-                                {/* <!-- List #1 --> */}
                                 <li>
-                                    {/* <!-- Graph --> */}
                                     <div><span id="todayspark1" className="spark"></span></div>
-                                    {/* <!-- Text --> */}
                                     <div className="datas-text">11,500 visitors/day</div>
                                 </li>
                                 <li>
@@ -108,21 +102,13 @@ class MainContent extends React.Component {
                                 </li>
                             </ul>
                         </div>
-
-
                     </div>
 
-
-                    {/* <!-- Today status end --> */}
-
-
-
                     <div className="row">
-
                         <div className="col-lg-9 col-md-12">
                             <div className="panel panel-default">
                                 <div className="panel-heading">
-                                    <h2><i className="fa fa-flag-o red"></i><strong>Registered Users</strong></h2>
+                                    <i className="fa fa-flag-o red"></i><strong>Registered Users</strong>
                                     <div className="panel-actions">
                                         <a href="index.html#" className="btn-setting"><i className="fa fa-rotate-right"></i></a>
                                         <a href="index.html#" className="btn-minimize"><i className="fa fa-chevron-up"></i></a>
@@ -142,7 +128,7 @@ class MainContent extends React.Component {
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td><img src="img/Germany.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/Germany.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>Germany</td>
                                                 <td>2563</td>
                                                 <td>1025</td>
@@ -150,18 +136,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="73" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '73%'}}>
+                                                            style={{ width: '73%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="27" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '27%'}}>
+                                                            style={{ width: '27%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">73%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/India.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/India.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>India</td>
                                                 <td>3652</td>
                                                 <td>2563</td>
@@ -169,18 +155,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '57%'}}>
+                                                            style={{ width: '57%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="43" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '43%'}}>
+                                                            style={{ width: '43%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">57%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/Spain.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/Spain.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>Spain</td>
                                                 <td>562</td>
                                                 <td>452</td>
@@ -188,18 +174,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '93%'}}>
+                                                            style={{ width: '93%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '7%'}}>
+                                                            style={{ width: '7%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">93%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/India.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/India.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>Russia</td>
                                                 <td>1258</td>
                                                 <td>958</td>
@@ -207,18 +193,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '20%'}}>
+                                                            style={{ width: '20%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '80%'}}>
+                                                            style={{ width: '80%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">20%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/Spain.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/Spain.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>USA</td>
                                                 <td>4856</td>
                                                 <td>3621</td>
@@ -226,18 +212,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '20%'}}>
+                                                            style={{ width: '20%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '80%'}}>
+                                                            style={{ width: '80%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">20%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/Germany.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/Germany.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>Brazil</td>
                                                 <td>265</td>
                                                 <td>102</td>
@@ -245,18 +231,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '20%'}}>
+                                                            style={{ width: '20%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '80%'}}>
+                                                            style={{ width: '80%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">20%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/Germany.png" style={{height: '18px', marginTop: '-2px'}}/></td>
+                                                <td><img src="img/Germany.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>Coloumbia</td>
                                                 <td>265</td>
                                                 <td>102</td>
@@ -264,18 +250,18 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '20%'}}>
+                                                            style={{ width: '20%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '80%'}}>
+                                                            style={{ width: '80%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">20%</span>
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td><img src="img/Germany.png" style={{height: '18px', marginTop: '-2px'}} /></td>
+                                                <td><img src="img/Germany.png" style={{ height: '18px', marginTop: '-2px' }} /></td>
                                                 <td>France</td>
                                                 <td>265</td>
                                                 <td>102</td>
@@ -283,11 +269,11 @@ class MainContent extends React.Component {
                                                     <div className="progress thin">
                                                         <div className="progress-bar progress-bar-danger" role="progressbar"
                                                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '20%'}}>
+                                                            style={{ width: '20%' }}>
                                                         </div>
                                                         <div className="progress-bar progress-bar-warning" role="progressbar"
                                                             aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"
-                                                            style={{width: '80%'}}>
+                                                            style={{ width: '80%' }}>
                                                         </div>
                                                     </div>
                                                     <span className="sr-only">20%</span>
@@ -596,120 +582,120 @@ class MainContent extends React.Component {
                             </section>
                             {/* <!--Project Activity end--> */}
                         </div>
-                    </div>br/>br/>
-
-                        <div className="row">
-                            <div className="col-md-6 portlets">
-                                <div className="panel panel-default">
-                                    <div className="panel-heading">
-                                        <h2><strong>Calendar</strong></h2>
-                                        <div className="panel-actions">
-                                            <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
-                                            <a href="#" className="wclose"><i className="fa fa-times"></i></a>
-                                        </div>
-
-                                    </div>br/>br/>br/>
-                                        <div className="panel-body">
-                                            {/* <!-- Widget content --> */}
-
-                                            {/* <!-- Below line produces calendar. I am using FullCalendar plugin. --> */}
-                                            <div id="calendar"></div>
-
-                                        </div>
                     </div>
 
-                </div>
-
-                                        <div className="col-md-6 portlets">
-                                            <div className="panel panel-default">
-                                                <div className="panel-heading">
-                                                    <div className="pull-left">Quick Post</div>
-                                                    <div className="widget-icons pull-right">
-                                                        <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
-                                                        <a href="#" className="wclose"><i className="fa fa-times"></i></a>
-                                                    </div>
-                                                    <div className="clearfix"></div>
-                                                </div>
-                                                <div className="panel-body">
-                                                    <div className="padd">
-
-                                                        <div className="form quick-post">
-                                                            {/* <!-- Edit profile form (not working)--> */}
-                                                            <form className="form-horizontal">
-                                                                {/* <!-- Title --> */}
-                                                                <div className="form-group">
-                                                                    <label className="control-label col-lg-2" htmlFor="title">Title</label>
-                                                                    <div className="col-lg-10">
-                                                                        {/* <input type="text" className="form-control" id="title" /> */}
-                                                                    </div>
-                                                                </div>
-                                                                {/* <!-- Content --> */}
-                                                                <div className="form-group">
-                                                                    <label className="control-label col-lg-2" htmlFor="content">Content</label>
-                                                                    <div className="col-lg-10">
-                                                                        <textarea className="form-control" id="content"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                {/* <!-- Cateogry --> */}
-                                                                <div className="form-group">
-                                                                    <label className="control-label col-lg-2">Category</label>
-                                                                    <div className="col-lg-10">
-                                                                        <select className="form-control">
-                                                                            <option value="">- Choose Cateogry -</option>
-                                                                            <option value="1">General</option>
-                                                                            <option value="2">News</option>
-                                                                            <option value="3">Media</option>
-                                                                            <option value="4">Funny</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                {/* <!-- Tags --> */}
-                                                                <div className="form-group">
-                                                                    <label className="control-label col-lg-2" htmlFor="tags">Tags</label>
-                                                                    <div className="col-lg-10">
-                                                                        {/* <input type="text" className="form-control" id="tags"> /</input> */}
-                                                                    </div>
-                                                                </div>
-
-                                                                {/* <!-- Buttons --> */}
-                                                                <div className="form-group">
-                                                                    {/* <!-- Buttons --> */}
-                                                                    <div className="col-lg-offset-2 col-lg-9">
-                                                                        <button type="submit" className="btn btn-primary">Publish</button>
-                                                                        <button type="submit" className="btn btn-danger">Save Draft</button>
-                                                                        <button type="reset" className="btn btn-default">Reset</button>
-                                                                    </div>
-                                                                </div>
-                                                            </form>
-                                                        </div>
-
-
-                                                    </div>
-                                                    <div className="widget-foot">
-                                                        {/* <!-- Footer goes here --> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-
-                                    {/* <!-- project team & activity end --> */}
+                    <div className="row">
+                        <div className="col-md-6 portlets">
+                            <div className="panel panel-default">
+                                <div className="panel-heading">
+                                    <strong>Calendar</strong>
+                                    <div className="panel-actions">
+                                        <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
+                                        <a href="#" className="wclose"><i className="fa fa-times"></i></a>
+                                    </div>
 
                                 </div>
-                                <div className="text-right">
-                                    <div className="credits">
-                                        {/* <!--
+                                <div className="panel-body">
+                                    {/* <!-- Widget content --> */}
+
+                                    {/* <!-- Below line produces calendar. I am using FullCalendar plugin. --> */}
+                                    <div id="calendar"></div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className="col-md-6 portlets">
+                            <div className="panel panel-default">
+                                <div className="panel-heading">
+                                    <div className="pull-left">Quick Post</div>
+                                    <div className="widget-icons pull-right">
+                                        <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
+                                        <a href="#" className="wclose"><i className="fa fa-times"></i></a>
+                                    </div>
+                                    <div className="clearfix"></div>
+                                </div>
+                                <div className="panel-body">
+                                    <div className="padd">
+
+                                        <div className="form quick-post">
+                                            {/* <!-- Edit profile form (not working)--> */}
+                                            <form className="form-horizontal">
+                                                {/* <!-- Title --> */}
+                                                <div className="form-group">
+                                                    <label className="control-label col-lg-2" htmlFor="title">Title</label>
+                                                    <div className="col-lg-10">
+                                                        <input type="text" className="form-control" id="title" />
+                                                    </div>
+                                                </div>
+                                                {/* <!-- Content --> */}
+                                                <div className="form-group">
+                                                    <label className="control-label col-lg-2" htmlFor="content">Content</label>
+                                                    <div className="col-lg-10">
+                                                        <textarea className="form-control" id="content"></textarea>
+                                                    </div>
+                                                </div>
+                                                {/* <!-- Cateogry --> */}
+                                                <div className="form-group">
+                                                    <label className="control-label col-lg-2">Category</label>
+                                                    <div className="col-lg-10">
+                                                        <select className="form-control">
+                                                            <option value="">- Choose Cateogry -</option>
+                                                            <option value="1">General</option>
+                                                            <option value="2">News</option>
+                                                            <option value="3">Media</option>
+                                                            <option value="4">Funny</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                {/* <!-- Tags --> */}
+                                                <div className="form-group">
+                                                    <label className="control-label col-lg-2" htmlFor="tags">Tags</label>
+                                                    <div className="col-lg-10">
+                                                        <input type="text" className="form-control" id="tags" />
+                                                    </div>
+                                                </div>
+
+                                                {/* <!-- Buttons --> */}
+                                                <div className="form-group">
+                                                    {/* <!-- Buttons --> */}
+                                                    <div className="col-lg-offset-2 col-lg-9">
+                                                        <button type="submit" className="btn btn-primary">Publish</button>
+                                                        <button type="submit" className="btn btn-danger">Save Draft</button>
+                                                        <button type="reset" className="btn btn-default">Reset</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+
+                                    </div>
+                                    <div className="widget-foot">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div className="text-right">
+                        <div className="credits">
+                            {/* <!--
         All the links in the footer should remain intact.
         You can delete the links only if you purchased the pro version.
         Licensing information: https://bootstrapmade.com/license/
         Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
       --> */}
-                                        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-                                    </div>
-                                </div>
-                            </section>
-                            </section>
-                            );
-                         }
-                      }
-                      export default MainContent;
+                            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                        </div>
+                    </div>
+                </section>
+            </section >
+        );
+    }
+}
+export default IndexContent;
