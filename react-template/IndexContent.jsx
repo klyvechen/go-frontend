@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import InfoBox from './comp/infoBox.jsx';
 import MessageBox from './comp/messageBox.jsx';
 import ToDoList from './comp/toDoList.jsx';
 
@@ -43,42 +44,22 @@ class IndexContent extends React.Component {
 
                     <div className="row">
                         <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                            <div className="info-box blue-bg">
-                                <i className="fa fa-cloud-download"></i>
-                                <div className="count">6.674</div>
-                                <div className="title">Download</div>
-                            </div>
-                            {/* <!--/.info-box--> */}
+                            <InfoBox bgcolor="blue-bg" iconcls="fa-cloud-download" count="6.674" title="Download" />
                         </div>
                         {/* <!--/.col--> */}
 
                         <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                            <div className="info-box brown-bg">
-                                <i className="fa fa-shopping-cart"></i>
-                                <div className="count">7.538</div>
-                                <div className="title">Purchased</div>
-                            </div>
-                            {/* <!--/.info-box--> */}
+                            <InfoBox bgcolor="brown-bg" iconcls="fa-shopping-cart" count="7.538" title="Purchased" />
                         </div>
                         {/* <!--/.col--> */}
 
                         <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                            <div className="info-box dark-bg">
-                                <i className="fa fa-thumbs-o-up"></i>
-                                <div className="count">4.362</div>
-                                <div className="title">Order</div>
-                            </div>
-                            {/* <!--/.info-box--> */}
+                            <InfoBox bgcolor="dark-bg" iconcls="fa-thumbs-o-up" count="4.362" title="Order" />
                         </div>
                         {/* <!--/.col--> */}
 
                         <div className="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                            <div className="info-box green-bg">
-                                <i className="fa fa-cubes"></i>
-                                <div className="count">1.426</div>
-                                <div className="title">Stock</div>
-                            </div>
-                            {/* <!--/.info-box--> */}
+                            <InfoBox bgcolor="green-bg" iconcls="fa-cubes" count="1.426" title="Stock" />
                         </div>
                         {/* <!--/.col--> */}
 
