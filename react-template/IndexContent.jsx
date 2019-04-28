@@ -1,9 +1,17 @@
 
 import React, { Component } from 'react';
+import MessageBox from './comp/messageBox.jsx';
 import ToDoList from './comp/toDoList.jsx';
 
 class IndexContent extends React.Component {
     render() {
+        const MESSAGES = [
+            { by: "me", meta: "John Smith", img: "img/user.jpg", content: "Vivamus diam elit diam, consectetur dapibus adipiscing elit." },
+            { by: "me", meta: "Jenifer Smith", img: "img/user22.png", content: " Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing elit." },
+            { by: "me", meta: "John Smith", img: "img/user.jpg", content: "Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing elit." },
+            { by: "me", meta: "Jenifer Smith", img: "img/user22.png", content: "Vivamus diam elit diam, consectetur dapibus adipiscing elit." },
+            { by: "me", meta: "John Smith", img: "img/user.jpg", content: "Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing eli." },
+        ];
         const TODOS = {
             head: {
                 title: "To Do Everyday", userImg: "img/avatar1_small.jpg", userName: "Jenifer smith"
@@ -371,106 +379,7 @@ class IndexContent extends React.Component {
                     {/* <!-- project team & activity start --> */}
                     <div className="row">
                         <div className="col-md-4 portlets">
-                            {/* <!-- Widget --> */}
-                            <div className="panel panel-default">
-                                <div className="panel-heading">
-                                    <div className="pull-left">Message</div>
-                                    <div className="widget-icons pull-right">
-                                        <a href="#" className="wminimize"><i className="fa fa-chevron-up"></i></a>
-                                        <a href="#" className="wclose"><i className="fa fa-times"></i></a>
-                                    </div>
-                                    <div className="clearfix"></div>
-                                </div>
-
-                                <div className="panel-body">
-                                    {/* <!-- Widget content --> */}
-                                    <div className="padd sscroll">
-
-                                        <ul className="chats">
-
-                                            {/* <!-- Chat by us. Use the className "by-me". --> */}
-                                            <li className="by-me">
-                                                {/* <!-- Use the className "pull-left" in avatar --> */}
-                                                <div className="avatar pull-left">
-                                                    <img src="img/user.jpg" alt="" />
-                                                </div>
-
-                                                <div className="chat-content">
-                                                    {/* <!-- In meta area, first include "name" and then "time" --> */}
-                                                    <div className="chat-meta">John Smith <span className="pull-right">3 hours
-                                                    ago</span></div>
-                                                    Vivamus diam elit diam, consectetur dapibus adipiscing elit.
-                                            <div className="clearfix"></div>
-                                                </div>
-                                            </li>
-
-                                            {/* <!-- Chat by other. Use the className "by-other". --> */}
-                                            <li className="by-other">
-                                                {/* <!-- Use the className "pull-right" in avatar --> */}
-                                                <div className="avatar pull-right">
-                                                    <img src="img/user22.png" alt="" />
-                                                </div>
-
-                                                <div className="chat-content">
-                                                    {/* <!-- In the chat meta, first include "time" then "name" --> */}
-                                                    <div className="chat-meta">3 hours ago <span className="pull-right">Jenifer
-                                                    Smith</span></div>
-                                                    Vivamus diam elit diam, consectetur fconsectetur dapibus adipiscing
-                                                    elit.
-                                            <div className="clearfix"></div>
-                                                </div>
-                                            </li>
-
-                                            <li className="by-me">
-                                                <div className="avatar pull-left">
-                                                    <img src="img/user.jpg" alt="" />
-                                                </div>
-
-                                                <div className="chat-content">
-                                                    <div className="chat-meta">John Smith <span className="pull-right">4 hours
-                                                    ago</span></div>
-                                                    Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus
-                                                    consectetur dapibus adipiscing elit.
-                                            <div className="clearfix"></div>
-                                                </div>
-                                            </li>
-
-                                            <li className="by-other">
-                                                {/* <!-- Use the className "pull-right" in avatar --> */}
-                                                <div className="avatar pull-right">
-                                                    <img src="img/user22.png" alt="" />
-                                                </div>
-
-                                                <div className="chat-content">
-                                                    {/* <!-- In the chat meta, first include "time" then "name" --> */}
-                                                    <div className="chat-meta">3 hours ago <span className="pull-right">Jenifer
-                                                    Smith</span></div>
-                                                    Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus
-                                                    consectetur dapibus adipiscing elit.
-                                            <div className="clearfix"></div>
-                                                </div>
-                                            </li>
-
-                                        </ul>
-
-                                    </div>
-                                    {/* <!-- Widget footer --> */}
-                                    <div className="widget-foot">
-
-                                        <form className="form-inline">
-                                            <div className="form-group">
-                                                {/* <input type="text" className="form-control"
-                                                    placeholder="Type your message here..." /> */}
-                                            </div>
-                                            <button type="submit" className="btn btn-info">Send</button>
-                                        </form>
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
+                            <MessageBox content={MESSAGES} />
                         </div>
 
                         <div className="col-lg-8">
