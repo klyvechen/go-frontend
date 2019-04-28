@@ -1,8 +1,24 @@
 
 import React, { Component } from 'react';
+import ToDoList from './comp/toDoList.jsx';
 
 class IndexContent extends React.Component {
     render() {
+        const TODOS = {
+            head: {
+                title: "To Do Everyday", userImg: "img/avatar1_small.jpg", userName: "Jenifer smith"
+            },
+            body: [
+                { time: "Today", memo: "web design", type: "Upload", id: "", img: "img/avatar1_small.jpg", status: "" },
+                { time: "Yesterday", memo: "Project Design Task", type: "Task", id: "work-progress2", img: "", status: "success" },
+                { time: "21-10-14", memo: "Generate Invoice", type: "Task", id: "work-progress3", img: "img/avatar1_small.jpg", status: "success" },
+                { time: "22-10-14", memo: "Project Testing", type: "To-Do", id: "", img: "img/avatar1_small.jpg", status: "primary" },
+                { time: "24-10-14", memo: "Project Release Date", type: "Milestone", id: "work-progress4", img: "", status: "info" },
+                { time: "28-10-14", memo: "Project Release Date", type: "To-Do", id: "work-progress5", img: "", status: "primary" },
+                { time: "Last week", memo: "Project Release Date", type: "To-Do", id: "work-progress1", img: "", status: "" },
+                { time: "lnast moth", memo: "Project Release Date", type: "To-Do", id: "", img: "img/avatar1_small.jpg", status: "success" },
+                { time: "", memo: "", type: "", id: "", img: "", status: "" }]
+        };
         return (
             <section id="main-content">
                 <section className="wrapper">
@@ -458,129 +474,7 @@ class IndexContent extends React.Component {
                         </div>
 
                         <div className="col-lg-8">
-                            {/* <!--Project Activity start--> */}
-                            <section className="panel">
-                                <div className="panel-body progress-panel">
-                                    <div className="row">
-                                        <div className="col-lg-8 task-progress pull-left">
-                                            <h1>To Do Everyday</h1>
-                                        </div>
-                                        <div className="col-lg-4">
-                                            <span className="profile-ava pull-right">
-                                                <img alt="" className="simple" src="img/avatar1_small.jpg" />
-                                                Jenifer smith
-                                    </span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <table className="table table-hover personal-task">
-                                    <tbody>
-                                        <tr>
-                                            <td>Today</td>
-                                            <td>
-                                                web design
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-important">Upload</span>
-                                            </td>
-                                            <td>
-                                                <span className="profile-ava">
-                                                    <img alt="" className="simple" src="img/avatar1_small.jpg" />
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Yesterday</td>
-                                            <td>
-                                                Project Design Task
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-success">Task</span>
-                                            </td>
-                                            <td>
-                                                <div id="work-progress2"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>21-10-14</td>
-                                            <td>
-                                                Generate Invoice
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-success">Task</span>
-                                            </td>
-                                            <td>
-                                                <div id="work-progress3"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>22-10-14</td>
-                                            <td>
-                                                Project Testing
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-primary">To-Do</span>
-                                            </td>
-                                            <td>
-                                                <span className="profile-ava">
-                                                    <img alt="" className="simple" src="img/avatar1_small.jpg" />
-                                                </span>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>24-10-14</td>
-                                            <td>
-                                                Project Release Date
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-info">Milestone</span>
-                                            </td>
-                                            <td>
-                                                <div id="work-progress4"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>28-10-14</td>
-                                            <td>
-                                                Project Release Date
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-primary">To-Do</span>
-                                            </td>
-                                            <td>
-                                                <div id="work-progress5"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>Last week</td>
-                                            <td>
-                                                Project Release Date
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-primary">To-Do</span>
-                                            </td>
-                                            <td>
-                                                <div id="work-progress1"></div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>last month</td>
-                                            <td>
-                                                Project Release Date
-                                    </td>
-                                            <td>
-                                                <span className="badge bg-success">To-Do</span>
-                                            </td>
-                                            <td>
-                                                <span className="profile-ava">
-                                                    <img alt="" className="simple" src="img/avatar1_small.jpg" />
-                                                </span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </section>
-                            {/* <!--Project Activity end--> */}
+                            <ToDoList content={TODOS} />
                         </div>
                     </div>
 
