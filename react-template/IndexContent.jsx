@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import PageHeader from './comp/pageHeader.jsx';
 import InfoBox from './comp/infoBox.jsx';
 import MessageBox from './comp/messageBox.jsx';
 import ToDoList from './comp/toDoList.jsx';
@@ -34,11 +35,7 @@ class IndexContent extends React.Component {
                     {/* <!--overview start--> */}
                     <div className="row">
                         <div className="col-lg-12">
-                            <h3 className="page-header"><i className="fa fa-laptop"></i> Dashboard</h3>
-                            <ol className="breadcrumb">
-                                <li><i className="fa fa-home"></i><a href="index.html">Home</a></li>
-                                <li><i className="fa fa-laptop"></i>Dashboard</li>
-                            </ol>
+                            <PageHeader />
                         </div>
                     </div>
 
