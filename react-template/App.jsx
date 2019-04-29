@@ -1,62 +1,43 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx'
 import SideBar from './SideBar.jsx'
-import SideBarItem from './SideBarItem.jsx';
 import IndexContent from './IndexContent.jsx';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 
 class App extends React.Component {
    render() {
+      const SIDEBAR_MODEL = [
+         {type: "sub-menu", href: "javascript:;", icon: "icon_document_alt", name: "採購", children: [
+            {type: "", href: "form_component.html", icon: "", name: "採購單預購", children: []},
+            {type: "", href: "form_validation.html", icon: "", name: "採購單分析", children: []}
+         ]},
+         {type: "active", href: "/index.html", icon: "icon_house_alt", name: "Dashboard", children: []},
+         {type: "sub-menu", href: "javascript:;", icon: "icon_document_alt", name: "Forms", children: [
+            {type: "", href: "form_component.html", icon: "", name: "Form Elements", children: []},
+            {type: "", href: "form_validation.html", icon: "", name: "Form Validation", children: []},
+         ]},
+         {type: "sub-menu", href: "javascript:;", icon: "icon_desktop", name: "UI Fitures", children: [
+            {type: "", href: "general.html", icon: "", name: "Elements", children: []},
+            {type: "", href: "buttons.html", icon: "", name: "Buttons", children: []},
+            {type: "", href: "grids.html", icon: "", name: "Grids", children: []}
+         ]},
+         {type: "active", href: "widgets.html", icon: "icon_genius", name: "Widgets", children: []},
+         {type: "active", href: "chart-chartjs.html", icon: "icon_piechart", name: "Charts", children: []},
+         {type: "sub-menu", href: "basic_table.html", icon: "icon_table", name: "Basic Table", children: []},
+         {type: "sub-menu", href: "javascript:;", icon: "icon_documents_alt", name: "Pages", children: [
+            {type: "", href: "profile.html", icon: "", name: "Profile", children: []},
+            {type: "", href: "login.html", icon: "", name: "Login Page", children: []},
+            {type: "", href: "contact.html", icon: "", name: "Contact Page", children: []},
+            {type: "", href: "blank.html", icon: "", name: "Blank Page", children: []},
+            {type: "", href: "404.html", icon: "", name: "404 Error", children: []}
+         ]},
+      ];
       return (
          <section id="container" className="">
             <Router>
                <Header></Header>
-               <SideBar>
-                  <SideBarItem clsName={'sub-menu'} href={'javascript:;'} iconcls={'icon_document_alt'} value={'採購'} hasChild={true}>
-                     <SideBarItem href={'form_component.html'} value={'採購單預購'} />
-                     <SideBarItem href={'form_validation.html'} value={'採購單分析'} />
-                  </SideBarItem>
-                  <SideBarItem clsName={'active'} href={'/index.html'} iconcls={'icon_house_alt'} value={'Dashboard'} />
-                  <SideBarItem clsName={'sub-menu'} href={'javascript:;'} iconcls={'icon_document_alt'} value={'Forms'} hasChild={true}>
-                     <SideBarItem href={'form_component.html'} value={'Form Elements'} />
-                     <SideBarItem href={'form_validation.html'} value={'Form Validation'} />
-                  </SideBarItem>
-                  <SideBarItem clsName={'sub-menu'} href={'javascript:;'} iconcls={'icon_desktop'} value={'UI Fitures'} hasChild={true}>
-                     <SideBarItem href={'general.html'} value={'Elements'} />
-                     <SideBarItem href={'buttons.html'} value={'Buttons'} />
-                     <SideBarItem href={'grids.html'} value={'Grids'} />
-                  </SideBarItem>
-
-                  <SideBarItem clsName={'active'} href={'widgets.html'} iconcls={'icon_genius'} value={'Widgets'} />
-                  <SideBarItem clsName={'active'} href={'chart-chartjs.html'} iconcls={'icon_piechart'} value={'Charts'} />
-
-                  <li className="sub-menu">
-                     <a href="javascript:;" className="">
-                        <i className="icon_table"></i>
-                        <span>Tables</span>
-                        <span className="menu-arrow arrow_carrot-right"></span>
-                     </a>
-                     <ul className="sub">
-                        <li><a className="" href="basic_table.html">Basic Table</a></li>
-                     </ul>
-                  </li>
-
-                  <li className="sub-menu">
-                     <a href="javascript:;" className="">
-                        <i className="icon_documents_alt"></i>
-                        <span>Pages</span>
-                        <span className="menu-arrow arrow_carrot-right"></span>
-                     </a>
-                     <ul className="sub">
-                        <li><a className="" href="profile.html">Profile</a></li>
-                        <li><a className="" href="login.html"><span>Login Page</span></a></li>
-                        <li><a className="" href="contact.html"><span>Contact Page</span></a></li>
-                        <li><a className="" href="blank.html">Blank Page</a></li>
-                        <li><a className="" href="404.html">404 Error</a></li>
-                     </ul>
-                  </li>
-               </SideBar>
+               <SideBar model={SIDEBAR_MODEL}/>
                <Route exact path="/index.html" component={IndexContent} />
             </Router>
          </section>
