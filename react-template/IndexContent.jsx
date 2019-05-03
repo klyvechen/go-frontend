@@ -16,6 +16,7 @@ class IndexContent extends React.Component {
             { by: "me", meta: "Jenifer Smith", img: "img/user22.png", content: "Vivamus diam elit diam, consectetur dapibus adipiscing elit." },
             { by: "me", meta: "John Smith", img: "img/user.jpg", content: "Vivamus diam elit diam, consectetur fermentum sed dapibus eget, Vivamus consectetur dapibus adipiscing eli." },
         ];
+
         const TODOS = {
             head: {
                 title: "To Do Everyday", userImg: "img/avatar1_small.jpg", userName: "Jenifer smith"
@@ -276,14 +277,7 @@ class IndexContent extends React.Component {
                         {/* <!--/col--> */}
 
                     </div>
-
-
-
                     {/* <!-- statics end --> */}
-
-
-
-
                     {/* <!-- project team & activity start --> */}
                     <div className="row">
                         <div className="col-md-4 portlets">
