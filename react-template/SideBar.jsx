@@ -3,13 +3,21 @@ import { BrowserRouter as Router, Link } from "react-router-dom";
 
 class SideBar extends React.Component {
 
+    componentWillMount() {
+        console.debug("SideBar will be Mounted ");
+    }
+    
     componentDidMount() {
-        console.log('sidebarId is', $('#sidebarId')[0]);
-        console.log('container is', $('#container')[0]);
-        jquery18().then(eval(scriptMap.jquery18));
-        bootstrapScript().then(eval(scriptMap.bootstrap));
+        console.debug("SideBar is Mounted ");
+        jQuery(document).ready(function(){
+            initializeJS();
+        });
      }
+  
+     contentUpdated() {
+        console.debug('deal content update');
 
+     }     
     render() {
         let sideBarItems;
         if (this.props.model) {
@@ -18,9 +26,9 @@ class SideBar extends React.Component {
                 </SideBarItem>);
         }
         return (
-            <aside>
-                <div id="sidebar" className="nav-collapse ">
-                    <ul className="sidebar-menu">
+            <aside ref={(el) => { this.myContent = el }}>
+                <div id="sidebar" className="nav-collapse">
+                    <ul className="sidebar-menu" style={{display: "none"}}>
                         {sideBarItems}
                     </ul>
                 </div>
