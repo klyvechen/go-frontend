@@ -1,2 +1,3 @@
 react-template/bundle
 package-lock.json
+.history/**
