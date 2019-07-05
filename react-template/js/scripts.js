@@ -1,5 +1,5 @@
 function initializeJS() {
-
+    console.log("initializeJS")
     //tool tips
     jQuery('.tooltips').tooltip();
 
@@ -88,6 +88,6 @@ function initializeJS() {
 
 }
 
-jQuery(document).ready(function(){
-    initializeJS();
-});
+// jQuery(document).ready(function(){
+//     initializeJS();
+// });

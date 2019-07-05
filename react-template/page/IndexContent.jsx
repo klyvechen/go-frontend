@@ -1,11 +1,10 @@
-
 import React, { Component } from 'react';
-import PageHeader from './comp/pageHeader.jsx';
-import InfoBox from './comp/infoBox.jsx';
-import ProgressBar from './comp/progressBar.jsx';
-import MessageBox from './comp/messageBox.jsx';
-import ToDoList from './comp/toDoList.jsx';
-import PostPanel from './comp/postPanel.jsx';
+import PageHeader from '../comp/pageHeader.jsx';
+import InfoBox from '../comp/infoBox.jsx';
+import ProgressBar from '../comp/progressBar.jsx';
+import MessageBox from '../comp/messageBox.jsx';
+import ToDoList from '../comp/toDoList.jsx';
+import PostPanel from '../comp/postPanel.jsx';
 
 class IndexContent extends React.Component {
     render() {
@@ -33,8 +32,7 @@ class IndexContent extends React.Component {
                 { time: "", memo: "", type: "", id: "", img: "", status: "" }]
         };
         return (
-            <section id="main-content">
-                <section className="wrapper">
+            <div>
                     {/* <!--overview start--> */}
                     <div className="row">
                         <div className="col-lg-12">
@@ -331,8 +329,7 @@ class IndexContent extends React.Component {
                             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
                     </div>
-                </section>
-            </section >
+            </div>
         );
     }
 }

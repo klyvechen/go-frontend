@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import Header from './Header.jsx'
 import SideBar from './SideBar.jsx'
-import IndexContent from './IndexContent.jsx';
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import Script from "react-load-script";
+import IndexContent from './page/IndexContent.jsx';
+import SupplierManagement from './page/SupplierManagement.jsx';
+import StoreManagement from './page/StoreManagement.jsx';
+import ProductManagement from './page/ProductManagement.jsx';
+import TopologyContent from './page/TopologyContent.jsx';
+import { HashRouter as Router, Route } from "react-router-dom";
 
 
 class App extends React.Component {
@@ -12,98 +15,58 @@ class App extends React.Component {
 
       this.state = {
          SIDEBAR_MODEL: null,
-         isload: false
       };
-
+      this._isMounted = false; // It is need for mounted
    }
 
    loadData() {
-      console.log("loading data")
-      if (!this.state.isload) {
+      console.debug("......loading sidebar model......")
+      if (!this.state.SIDEBAR_MODEL) {
          fetch('http://localhost:8003/sidebar')
             .then(response => response.json())
-            .then(data => this.setState({ SIDEBAR_MODEL: data }))
-            .then(console.log("data fetched", this.state))
-            .then(
-               () => {
-                  // $.getScript("js/jquery-1.8.3.min.js").done((d)=>{console.log(d);$.globalEval(d)});
-                  // $.getScript("js/bootstrap.min.js").done((d)=>{console.log(d);$.globalEval(d)});
-                  // console.log(scriptMap.jquery18);
-                  // console.log(scriptMap.bootstrap);
-                  // console.log('sidebarId is', $('#sidebarId')[0]);
-                  // console.log('container is', $('#container')[0]);
-      
-               }
-            )
-            .then(this.state.isload = true);
+            .then(data => {
+               console.debug("Data is loaded, Mounted is", this._isMounted)
+               if (this._isMounted)  {
+                  console.debug("Data is loaded, setting state mountload is true")
+                  this.setState({ SIDEBAR_MODEL: data }); 
+               } 
+            })
       }
    }
+
+   componentWillMount() {
+      console.debug("App will be Mounted ");
+   }
    componentDidMount() {
+      console.debug("App is Mounted ");
+      this._isMounted = true;
       this.loadData();
    }
 
-   handleScriptCreate() {
-      this.setState({ scriptLoaded: false });
+   componentWillUnmount() {
+      console.debug("App will be Unmounted ");
+      this._isMounted = false;
    }
-
-
-   handleScriptError() {
-      this.setState({ scriptError: true });
-   }
-
-   handleScriptLoad() {
-      this.setState({ scriptLoaded: true });
-   }
-
 
    render() {
-      // this.loadData();
-      // this.state.SIDEBAR_MODEL =
-      //    [
-      //       {
-      //          type: "sub-menu", href: "javascript:;", icon: "icon_document_alt", name: "採購", children: [
-      //             { type: "", href: "form_component.html", icon: "", name: "採購單預購", children: [] },
-      //             { type: "", href: "form_validation.html", icon: "", name: "採購單分析", children: [] }
-      //          ]
-      //       },
-      //       { type: "active", href: "/index.html", icon: "icon_house_alt", name: "Dashboard", children: [] },
-      //       {
-      //          type: "sub-menu", href: "javascript:;", icon: "icon_document_alt", name: "Forms", children: [
-      //             { type: "", href: "form_component.html", icon: "", name: "Form Elements", children: [] },
-      //             { type: "", href: "form_validation.html", icon: "", name: "Form Validation", children: [] },
-      //          ]
-      //       },
-      //       {
-      //          type: "sub-menu", href: "javascript:;", icon: "icon_desktop", name: "UI Fitures", children: [
-      //             { type: "", href: "general.html", icon: "", name: "Elements", children: [] },
-      //             { type: "", href: "buttons.html", icon: "", name: "Buttons", children: [] },
-      //             { type: "", href: "grids.html", icon: "", name: "Grids", children: [] }
-      //          ]
-      //       },
-      //       { type: "active", href: "widgets.html", icon: "icon_genius", name: "Widgets", children: [] },
-      //       { type: "active", href: "chart-chartjs.html", icon: "icon_piechart", name: "Charts", children: [] },
-      //       { type: "sub-menu", href: "basic_table.html", icon: "icon_table", name: "Basic Table", children: [] },
-      //       {
-      //          type: "sub-menu", href: "javascript:;", icon: "icon_documents_alt", name: "Pages", children: [
-      //             { type: "", href: "profile.html", icon: "", name: "Profile", children: [] },
-      //             { type: "", href: "login.html", icon: "", name: "Login Page", children: [] },
-      //             { type: "", href: "contact.html", icon: "", name: "Contact Page", children: [] },
-      //             { type: "", href: "blank.html", icon: "", name: "Blank Page", children: [] },
-      //             { type: "", href: "404.html", icon: "", name: "404 Error", children: [] }
-      //          ]
-      //       },
-      //    ];
-      console.log(this.state.SIDEBAR_MODEL);
       return (
          <div>
-            <section id="container" className="">
+            <section id="container" className="sidebar-close sidebar-closed">
                <Router>
                   <Header />
                   {
                      this.state && this.state.SIDEBAR_MODEL &&
                      <div>{<SideBar id="siedebarId" model={this.state.SIDEBAR_MODEL} />}</div>
                   }
-                  <Route exact path="/index.html" component={IndexContent} />
+                  <section id="main-content">
+                     <section className="wrapper">
+                        <Route exact path="/index" component={IndexContent} />
+                        <Route path="/supplier" component={SupplierManagement} />
+                        <Route path="/store" component={StoreManagement} />
+                        <Route path="/topology" component={TopologyContent} />
+                        <Route path="/productManagement" component={ProductManagement} />
+                     </section>
+                  </section>
                </Router>
             </section>
          </div>
